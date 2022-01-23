@@ -7,11 +7,11 @@ def test_check_type():
 
 
 @pytest.mark.e2e_test
-def test_check_type():
+def test_scenario2():
     assert True
 
 @pytest.mark.e2e_test
-def test_check_type():
+def test_scenario2():
     assert True
 
 @pytest.mark.cleanup
