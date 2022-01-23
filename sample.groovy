@@ -22,7 +22,9 @@ pipeline {
             }
         }
         stage('Pylint') {
-            echo 'Executing linter...'
+            steps {
+                echo 'Executing linter...'
+            }
         }
         stage('Test') {
             steps {
