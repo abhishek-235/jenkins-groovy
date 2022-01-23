@@ -33,7 +33,6 @@ pipeline {
                     sh """
                         source v_env/bin/activate
                         pytest tests/example_tests.py -m check_class
-                        deactivate
                     """
                     echo 'Integration Testing completed...'    
                 },
@@ -41,7 +40,6 @@ pipeline {
                     sh """
                         source v_env/bin/activate
                         pytest tests/example_tests.py -m e2e_test
-                        deactivate
                     """
                     echo 'E2E Testing completed...'    
                 }
