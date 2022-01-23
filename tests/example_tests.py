@@ -2,8 +2,7 @@ import pytest
 
 @pytest.mark.check_class
 def test_check_type():
-    int_var = 5
-    assert type(int_var) == int
+    assert True
 
 @pytest.mark.check_class
 def test_check_type2():
