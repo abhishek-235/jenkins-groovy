@@ -6,6 +6,14 @@ def test_check_type():
     assert type(int_var) == int
 
 
+@pytest.mark.e2e_test
+def test_check_type():
+    assert True
+
+@pytest.mark.e2e_test
+def test_check_type():
+    assert True
+
 @pytest.mark.cleanup
 def test_cleanup():
     print("do cleanup stuff...")
