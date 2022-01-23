@@ -21,9 +21,16 @@ pipeline {
                 '''
             }
         }
-        stage('Pylint') {
+        stage("Pylint") {
             steps {
-                echo 'Executing linter...'
+                parallel (
+                "Pylint": {
+                    echo 'Checking linting errors...'
+                },
+                "AnotherJob": {
+                    echo "running another job in parallel"
+                }
+                )
             }
         }
         stage('Test') {
@@ -32,7 +39,7 @@ pipeline {
                 "Integration Test": {
                     sh """
                         source v_env/bin/activate
-                        pytest tests/example_tests.py -m check_class
+                        pytest tests/example_tests.py -m cleanup
                     """
                     echo 'Integration Testing completed...'    
                 },
