@@ -1,10 +1,10 @@
 import pytest
 
-@pytest.mark.check_class
+@pytest.mark.smoke
 def test_check_type():
     assert True
 
-@pytest.mark.check_class
+@pytest.mark.smoke
 def test_check_type2():
     assert True
 
