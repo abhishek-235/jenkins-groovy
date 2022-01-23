@@ -21,6 +21,9 @@ pipeline {
                 '''
             }
         }
+        stage('Pylint') {
+            echo 'Executing linter...'
+        }
         stage('Test') {
             steps {
                 parallel (
